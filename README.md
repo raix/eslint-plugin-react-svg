@@ -25,7 +25,7 @@ $ npm install eslint-plugin-react-svg --save-dev
 ```json
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react-svg/recommended"
   ]
 ```
 
