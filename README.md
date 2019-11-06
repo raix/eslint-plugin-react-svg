@@ -68,6 +68,6 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* [react-svg/no-unused-ids-in-svg](docs/no-unused-ids-in-svg.md): Forbid ids not referenced in the svg
-* [react-svg/no-unused-empty-tag-in-svg](docs/no-unused-empty-tag-in-svg): Forbids empty elements that doesn't render anything
-* [react-svg/no-metadata-in-svg](docs/no-metadata-in-svg): Forbids metadata like "title" / "desc"
+* [react-svg/no-unused-ids-in-svg](docs/rules/no-unused-ids-in-svg.md): Forbid ids not referenced in the svg
+* [react-svg/no-unused-empty-tag-in-svg](docs/rules/no-unused-empty-tag-in-svg): Forbids empty elements that doesn't render anything
+* [react-svg/no-metadata-in-svg](docs/rules/no-metadata-in-svg): Forbids metadata like "title" / "desc"
