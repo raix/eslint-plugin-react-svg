@@ -29,25 +29,41 @@ var ruleTester = new RuleTester();
 ruleTester.run("no-unused-empty-tag-in-svg", rule, {
 
     valid: [
-        "const Foo = () => (<svg><line /></svg>);"
+        "const Foo = () => (<svg><line /></svg>);",
     ],
 
     invalid: [
-        {
-            code: "const Foo = () => (<svg></svg>);",
-            errors: [{
-                message: "No empty svg tags allowed",
-                type: "JSXElement"
-            }],
-            output: "const Foo = () => ();"
-        },
-        {
-          code: "const Foo = () => (<svg><g></g></svg>);",
+      {
+          code: "const Foo = () => (<><svg></svg></>);",
           errors: [{
-              message: "No empty svg tags allowed",
+              message: "No empty <svg> tags allowed",
               type: "JSXElement"
           }],
-          output: "const Foo = () => (<svg></svg>);" // xxx: should be empty?
+          output: "const Foo = () => (<></>);"
+      },
+      {
+        code: "const Foo = () => (<svg><g></g></svg>);",
+        errors: [{
+            message: "No empty <g> tags allowed",
+            type: "JSXElement"
+        }],
+        output: "const Foo = () => (<svg></svg>);" // xxx: should be empty?
+      },
+      {
+        code: "const Foo = () => (<svg></svg>);",
+        errors: [{
+            message: "No empty <svg> tags allowed",
+            type: "JSXElement"
+        }],
+        output: "const Foo = () => (<svg></svg>);" // xxx: Cannot be fixed safely
+      },
+      {
+        code: "function Foo() { return (<svg></svg>); }",
+        errors: [{
+            message: "No empty <svg> tags allowed",
+            type: "JSXElement"
+        }],
+        output: "function Foo() { return (<svg></svg>); }" // xxx: Cannot be fixed safely
       }
     ]
 });
