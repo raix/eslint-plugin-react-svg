@@ -46,7 +46,7 @@ ruleTester.run("no-unused-ids-in-svg", rule, {
         const Bar = () => (
             <Foo>
                 <g width="100%" id="foo_id" height="100%">
-                    <line xlink:href="#foo_id" />
+                    <line xlinkHref="#foo_id" />
                 </g>
             </Foo>
         );`
