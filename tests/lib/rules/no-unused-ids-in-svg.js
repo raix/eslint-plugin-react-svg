@@ -38,16 +38,18 @@ ruleTester.run("no-unused-ids-in-svg", rule, {
         `const Foo = () => (
             <svg>
                 <g width="100%" id="foo_id" height="100%">
-                    <line href="#foo_id" />
+                    <line />
                 </g>
+                <use href="#foo_id" x="10" fill="blue"/>
             </svg>
         );`,
         `const Foo = ({children}) => (<svg>{children}</svg>);
         const Bar = () => (
             <Foo>
                 <g width="100%" id="foo_id" height="100%">
-                    <line xlinkHref="#foo_id" />
+                    <line />
                 </g>
+                <use xlinkHref="#foo_id" x="10" fill="blue"/>
             </Foo>
         );`
     ],
