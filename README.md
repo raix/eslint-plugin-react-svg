@@ -1,4 +1,4 @@
-# eslint-plugin-react-svg
+# eslint-plugin-react-svg [![Build Status](https://travis-ci.org/raix/eslint-plugin-react-svg.svg?branch=master)](https://travis-ci.org/raix/eslint-plugin-react-svg)
 
 SVG specific rules for react
 
