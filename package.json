@@ -1,11 +1,15 @@
 {
   "name": "eslint-plugin-react-svg",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "description": "SVG specific rules for react svg",
   "keywords": [
     "eslint",
+    "eslint-plugin",
     "eslintplugin",
-    "eslint-plugin"
+    "svg",
+    "clean",
+    "react-svg",
+    "react"
   ],
   "author": "Morten Henriksen (aka raix)",
   "repository": {
@@ -16,6 +20,7 @@
   "bugs": "https://github.com/raix/eslint-plugin-react-svg/issues",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "eslint . --ext js,jsx",
     "test": "ts-mocha tests --recursive"
   },
   "dependencies": {
@@ -24,6 +29,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
+    "eslint-plugin-react": "^7.16.0",
     "mocha": "^3.1.2",
     "ts-mocha": "^6.0.0",
     "typescript": "^3.6.4",
@@ -32,15 +38,6 @@
   "peerDependencies": {
     "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
   },
-  "keywords": [
-    "eslint",
-    "eslint-plugin",
-    "eslintplugin",
-    "svg",
-    "clean",
-    "react-svg",
-    "react"
-  ],
   "engines": {
     "node": ">=0.10.0"
   },
