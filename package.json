@@ -20,6 +20,7 @@
   "bugs": "https://github.com/raix/eslint-plugin-react-svg/issues",
   "main": "lib/index.js",
   "scripts": {
+    "semantic-release": "echo \"Not implemented yet\"",
     "lint": "eslint . --ext js,jsx",
     "test": "ts-mocha tests --recursive"
   },
