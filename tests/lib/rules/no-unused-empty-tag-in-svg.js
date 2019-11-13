@@ -30,6 +30,7 @@ ruleTester.run("no-unused-empty-tag-in-svg", rule, {
 
     valid: [
         "const Foo = () => (<svg><line /></svg>);",
+        'const Foo = () => (<svg transform="translate(0 0)"></svg>);',
     ],
 
     invalid: [
